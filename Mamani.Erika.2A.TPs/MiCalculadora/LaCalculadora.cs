@@ -19,6 +19,8 @@ namespace MiCalculadora
             this.txtNumero1.Multiline = true;
             this.txtNumero2.Multiline = true;
 
+            this.lblResultado.Text = "";
+            this.lblResultado.TextAlign = ContentAlignment.MiddleRight;
             this.cmbOperador.SelectedItem = "/";
         }
 
@@ -39,7 +41,7 @@ namespace MiCalculadora
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            if (this.lblResultado.Text == null)
+            if (this.lblResultado.Text == "")
             {
                 this.lblResultado.Text = "Campo vacío.";
             }
@@ -51,7 +53,7 @@ namespace MiCalculadora
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
-            if (this.lblResultado.Text == null)
+            if (this.lblResultado.Text == "")
             {
                 this.lblResultado.Text = "Campo vacío.";
             }

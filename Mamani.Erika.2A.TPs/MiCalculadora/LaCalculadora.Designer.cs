@@ -52,7 +52,7 @@
             "/"});
             this.cmbOperador.Location = new System.Drawing.Point(170, 42);
             this.cmbOperador.Name = "cmbOperador";
-            this.cmbOperador.Size = new System.Drawing.Size(66, 39);
+            this.cmbOperador.Size = new System.Drawing.Size(81, 39);
             this.cmbOperador.TabIndex = 0;
             // 
             // lblResultado
@@ -60,7 +60,7 @@
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblResultado.Location = new System.Drawing.Point(292, 9);
+            this.lblResultado.Location = new System.Drawing.Point(165, 10);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(86, 29);
             this.lblResultado.TabIndex = 1;

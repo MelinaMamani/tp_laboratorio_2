@@ -10,7 +10,7 @@ namespace Entidades
     {
         public static double Operar (Numero num1, Numero num2, string operador)
         {
-            double rdo = 0;
+            double rdo;
 
             switch (ValidarOperador(operador))
             {
@@ -27,6 +27,7 @@ namespace Entidades
                     rdo = num1 / num2;
                     break;
                 default:
+                    rdo = 0;
                     break;
             }
 
