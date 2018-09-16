@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Calculadora
+    public class Calculadora
     {
-        public double Operar (Numero num1, Numero num2, string operador)
+        public static double Operar (Numero num1, Numero num2, string operador)
         {
             double rdo = 0;
 
@@ -33,7 +33,7 @@ namespace Entidades
             return rdo;
         }
 
-        private string ValidarOperador (string operador)
+        private static string ValidarOperador (string operador)
         {
             if (operador == "+" || operador == "-" || operador == "*" || operador == "/")
             {

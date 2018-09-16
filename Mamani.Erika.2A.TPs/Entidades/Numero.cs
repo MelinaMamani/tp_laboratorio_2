@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Numero
+    public class Numero
     {
         private double numero;
 
-        private string strNum;
         private string SetNumero
         {
             set
             {
-                this.numero = ValidarNumero(strNum);
-                //numero = value;
+                this.numero = ValidarNumero(value);
             }
         }
 
@@ -33,7 +31,7 @@ namespace Entidades
 
         public Numero (string strNumero)
         {
-            this.strNum = strNumero;
+            this.SetNumero = strNumero;
         }
         #endregion
 
@@ -50,7 +48,7 @@ namespace Entidades
             return numero;
         }
 
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
             string msj = "Valor inválido.";
 
@@ -64,13 +62,13 @@ namespace Entidades
             return msj;
         }
 
-        public string DecimalBinario(double numero)
+        public static string DecimalBinario(double numero)
         {
             string num = Convert.ToString(numero);
             return DecimalBinario(num);
         }
 
-        public string DecimalBinario(string numero)
+        public static string DecimalBinario(string numero)
         {
             int num = Convert.ToInt32(numero);
             string bin = Convert.ToString(num, 2);
@@ -105,7 +103,16 @@ namespace Entidades
 
         public static double operator /(Numero num1, Numero num2)
         {
-            return num1.numero / num2.numero;
+            double rdo;
+            if (num2.numero == 0)
+            {
+                rdo = 0;
+            }
+            else
+            {
+                rdo = num1.numero / num2.numero;
+            }
+            return rdo;
         }
         
         #endregion
