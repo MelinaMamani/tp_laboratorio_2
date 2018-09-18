@@ -50,7 +50,7 @@
             "-",
             "*",
             "/"});
-            this.cmbOperador.Location = new System.Drawing.Point(170, 42);
+            this.cmbOperador.Location = new System.Drawing.Point(157, 42);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(81, 39);
             this.cmbOperador.TabIndex = 0;
@@ -62,9 +62,9 @@
             this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblResultado.Location = new System.Drawing.Point(165, 10);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(86, 29);
+            this.lblResultado.Size = new System.Drawing.Size(73, 29);
             this.lblResultado.TabIndex = 1;
-            this.lblResultado.Text = "5 ahre";
+            this.lblResultado.Text = "Total";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNumero2

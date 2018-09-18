@@ -50,39 +50,65 @@ namespace Entidades
 
         public static string BinarioDecimal(string binario)
         {
-            string msj = "Valor inválido.";
-
-            int num = Convert.ToInt32(binario, 2);
-
-            if ( num >= 0)
+            int[] numeroCad = new int[binario.Length];
+            string msj = "";
+            double numero = 0;
+            bool flag = true;
+            int i;
+            for (i = 0; i < binario.Length; i++)
             {
-                msj = num.ToString();
+                numeroCad[i] = (int)char.GetNumericValue(binario[i]);
+                if (numeroCad[i] != 0 && numeroCad[i] != 1)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true)
+            {
+                for (i = 0; i < binario.Length; i++)
+                {
+                    numero += (numeroCad[i] * Math.Pow(2, binario.Length - i - 1));
+                }
+                msj = numero.ToString();
+            }
+            else
+            {
+                msj = "Valor inválido";
             }
 
             return msj;
         }
 
-        public static string DecimalBinario(double numero)
-        {
-            string num = Convert.ToString(numero);
-            return DecimalBinario(num);
-        }
-
         public static string DecimalBinario(string numero)
         {
-            int num = Convert.ToInt32(numero);
-            string bin = Convert.ToString(num, 2);
-
-            if ( bin != "")
+            string msj;
+            double numeroDouble;
+            if (double.TryParse(numero, out numeroDouble))
             {
-                return bin;
+                msj = DecimalBinario(numeroDouble);
             }
             else
             {
-                return "Valor inválido.";
+                msj = "Valor inválido";
             }
-            
+            return msj;
         }
+
+        public static string DecimalBinario(double entero)
+        {
+            int numero = (int)entero;
+            string binario = "";
+            while (numero > 0)
+            {
+                binario += (numero % 2).ToString();
+                numero = numero / 2;
+            }
+            char[] charArray = binario.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
         #endregion
 
         #region Sobrecargas
