@@ -1,0 +1,13 @@
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.LaCalculadora.resources
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\Usuario\Desktop\TPL2\Mamani.Erika.2A.TPs\MiCalculadora\obj\Debug\MiCalculadora.pdb
