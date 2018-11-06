@@ -39,9 +39,16 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Métodos
-
+        /// <summary> 
+        /// Método abstracto de <see cref="Universitario"/>
+        /// </summary>
+        /// <returns></returns>
         protected abstract string ParticiparEnClase();
         
+        /// <summary>
+        /// Muestra los datos de <see cref="Universitario"/>
+        /// </summary>
+        /// <returns></returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();

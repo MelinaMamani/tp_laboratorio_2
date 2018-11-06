@@ -17,7 +17,9 @@ namespace ClasesInstansiables
         #endregion
 
         #region Constructores
-
+        /// <summary>
+        /// Inicializa el atributo estático random.
+        /// </summary>
         static Profesor()
         {
             Profesor.random = new Random();
@@ -27,7 +29,14 @@ namespace ClasesInstansiables
         {
             
         }
-
+        /// <summary>
+        /// Inicializa un objeto profesor y todos sus campos.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="nacionalidad"></param>
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(id, nombre, apellido, dni, nacionalidad)
         {
@@ -39,30 +48,18 @@ namespace ClasesInstansiables
 
         #region Métodos
 
+        /// <summary>
+        /// Establece dos valores aleatorios para el atributo clasesDelDia.
+        /// </summary>
         private void _randomClases()
         {
-            for (int i = 0; i < 2; i++)
-            {
-                switch (Profesor.random.Next(1, 5))
-                {
-                    case 1:
-                        this.clasesDelDia.Enqueue(Universidad.EClases.Programacion);
-                        break;
-                    case 2:
-                        this.clasesDelDia.Enqueue(Universidad.EClases.Laboratorio);
-                        break;
-                    case 3:
-                        this.clasesDelDia.Enqueue(Universidad.EClases.Legislacion);
-                        break;
-                    case 4:
-                        this.clasesDelDia.Enqueue(Universidad.EClases.SPD);
-                        break;
-                    default:
-                        break;
-                }
-            }
+            this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));
+            this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));
         }
-
+        /// <summary>
+        /// Muestra las clases que dicta esta instancia y devuelve una cadena con las mismas.
+        /// </summary>
+        /// <returns></returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
@@ -76,7 +73,10 @@ namespace ClasesInstansiables
 
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Genera una cadena con los datos del objeto profesor y la devuelve.
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -87,7 +87,10 @@ namespace ClasesInstansiables
 
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Devuelve una cadena que representa al objeto actual.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return this.MostrarDatos();
@@ -96,7 +99,12 @@ namespace ClasesInstansiables
         #endregion
 
         #region Sobrecargas
-
+        /// <summary>
+        /// Un profesor será igual a una clase si dicta la misma.
+        /// </summary>
+        /// <param name="i">Profesor a comparar.</param>
+        /// <param name="clase">Clase a comparar.</param>
+        /// <returns></returns>
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             bool ver = false;
@@ -111,12 +119,17 @@ namespace ClasesInstansiables
             }
             return ver;
         }
-
+        /// <summary>
+        /// Un profesor será distinto a una clase si no dicta la misma.
+        /// </summary>
+        /// <param name="i">Profesor a comparar.</param>
+        /// <param name="clase">Clase a comparar.</param>
+        /// <returns></returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);
         }
 
-        #endregion
+        #endregion 
     }
 }
