@@ -98,7 +98,7 @@ namespace ClasesInstansiables
         public static bool Guardar(Universidad g)
         {
             Xml<Universidad> xml = new Xml<Universidad>();
-            return xml.Guardar(AppDomain.CurrentDomain.BaseDirectory + @"../Test/Archivos/Universidad.xml", g);
+            return xml.Guardar("../Test/Archivos/Universidad.xml", g);
             //return xml.Guardar("C:/Users/Usuario/Desktop/Universidad.xml", g);
         }
 
@@ -106,7 +106,7 @@ namespace ClasesInstansiables
         {
             Universidad u = new Universidad();
             Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer(AppDomain.CurrentDomain.BaseDirectory + @"../Test/Archivos/Universidad.xml", out u);
+            xml.Leer("../Test/Archivos/Universidad.xml", out u);
             //xml.Leer("C:/Users/Usuario/Desktop/Universidad.xml", out u);
             return u;
         }

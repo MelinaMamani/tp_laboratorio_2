@@ -65,7 +65,7 @@ namespace ClasesInstansiables
         public static bool Guardar(Jornada jornada)
         {
             Texto archivoTxt = new Texto(); 
-            return archivoTxt.Guardar(AppDomain.CurrentDomain.BaseDirectory + @"../Test/Archivos/Jornadas.txt", jornada.ToString());
+            return archivoTxt.Guardar("../Test/Archivos/Jornadas.txt", jornada.ToString());
             //return archivoTxt.Guardar("C:/Users/Usuario/Desktop/Jornadas.txt", jornada.ToString());
         }
 
@@ -73,7 +73,7 @@ namespace ClasesInstansiables
         {
             Texto archivoTxt = new Texto();
             string retorno;
-            archivoTxt.Leer(AppDomain.CurrentDomain.BaseDirectory + @"../Test/Archivos/Jornadas.txt", out retorno);
+            archivoTxt.Leer("../Test/Archivos/Jornadas.txt", out retorno);
             //archivoTxt.Leer("C:/Users/Usuario/Desktop/Jornadas.txt", out retorno);
             return retorno;
         }

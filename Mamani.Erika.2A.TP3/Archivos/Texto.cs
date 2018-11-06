@@ -21,9 +21,10 @@ namespace Archivos
             bool ver = false;
             try
             {
-                using (StreamWriter stream = new StreamWriter(archivo, false))
+                using (StreamWriter stream = new StreamWriter(archivo))
                 {
-                    stream.Write(datos);
+                    stream.WriteLine(datos);
+                    stream.Close();
                     ver = true;
                 }
             }
@@ -49,6 +50,7 @@ namespace Archivos
                 using (StreamReader stream = new StreamReader(archivo))
                 {
                     datos = stream.ReadToEnd();
+                    stream.Close();
                     ver = true;
                 }
             }
