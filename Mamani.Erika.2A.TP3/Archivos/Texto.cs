@@ -35,7 +35,7 @@ namespace Archivos
             }
             return ver;
         }
-
+        
         /// <summary>
         /// Lee un archivo de texto y retorna los datos.
         /// </summary>
